@@ -1,0 +1,8 @@
+{{- include "adp-helm-library.deployment" (list . "adp-backstage-demo1.deployment") -}}
+{{- define "adp-backstage-demo1.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "adp-helm-library.container" (list . "adp-backstage-demo1.container") }}
+{{- end -}}
